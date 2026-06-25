@@ -6,8 +6,9 @@ import type { FrontmatterImage } from '~/types'
 interface Props {
   avatarImage?: FrontmatterImage
   githubCalendar?: string
+  calendarYear?: number
 }
-const { avatarImage, githubCalendar } = Astro.props
+const { avatarImage, githubCalendar, calendarYear } = Astro.props
 ---
 
 <div class="my-6 md:mx-2 flex flex-col items-center">
@@ -33,5 +34,5 @@ const { avatarImage, githubCalendar } = Astro.props
       </div>
     </div>
   </div>
-  {githubCalendar && <GitHubActivityCalendar username={githubCalendar} />}
+  {githubCalendar && <GitHubActivityCalendar username={githubCalendar} year={calendarYear} />}
 </div>

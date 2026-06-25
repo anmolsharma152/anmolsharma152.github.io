@@ -24,7 +24,7 @@ const config: SiteConfig = {
   ],
   themes: {
     mode: 'select',
-    default: 'catppuccin-mocha',
+    default: 'github-dark-default',
     include: [
       'andromeeda',
       'aurora-x',
