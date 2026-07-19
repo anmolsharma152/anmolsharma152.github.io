@@ -2,6 +2,15 @@
 
 Blog-portfolio built with [Astro](https://astro.build) + [MultiTerm](https://github.com/stelcodes/multiterm-astro).
 
+
+## Docs
+
+| Doc | Purpose |
+|-----|---------|
+| **[docs/STATUS.md](./docs/STATUS.md)** | Handoff status |
+| [docs/setup.md](./docs/setup.md) | Setup |
+| [AGENTS.md](./AGENTS.md) | Agent guidance |
+
 **Live:** [anmolsharma152.github.io](https://anmolsharma152.github.io)
 
 ---
