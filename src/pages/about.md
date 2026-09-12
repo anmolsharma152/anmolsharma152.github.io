@@ -3,14 +3,46 @@ layout: '~/layouts/MarkdownLayout.astro'
 title: About Me
 ---
 
-# Anmol Sharma
+## Anmol Sharma
 ### **Agentic AI & Systems Engineer**
 *Building Low-Latency AI Infra & Stateful Multi-Agent Backends*
 
-📍 **Jaipur, India** &nbsp;|&nbsp; ✉️ [anmolsharma152.dev@gmail.com](mailto:anmolsharma152.dev@gmail.com) &nbsp;|&nbsp; 📞 +91-84128-80194  
-🔗 [GitHub](https://github.com/anmolsharma152) &nbsp;|&nbsp; 🔗 [LinkedIn](https://linkedin.com/in/anmolsharma152)
+<div class="contact-bar">
+  <span class="contact-item">📍 Jaipur, India</span>
+  <span class="sep">•</span>
+  <span class="contact-item">✉️ <a href="mailto:anmolsharma152.dev@gmail.com">anmolsharma152.dev@gmail.com</a></span>
+  <span class="sep">•</span>
+  <span class="contact-item">📞 <a href="tel:+918412880194">+91&#8209;84128&#8209;80194</a></span>
+  <span class="sep">•</span>
+  <span class="contact-item">🔗 <a href="https://github.com/anmolsharma152" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+  <span class="sep">•</span>
+  <span class="contact-item">🔗 <a href="https://linkedin.com/in/anmolsharma152" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+</div>
 
----
+<style>
+  .contact-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+    margin: 1rem 0 1.5rem 0;
+  }
+  .contact-item {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .sep {
+    opacity: 0.4;
+  }
+  @media (max-width: 640px) {
+    .sep {
+      display: none;
+    }
+  }
+</style>
 
 <div style="margin: 1.5rem 0;">
   <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" download="Anmol_Sharma_Resume.pdf" style="display: inline-block; padding: 0.6rem 1.2rem; background: var(--accent); color: var(--bg); font-family: var(--font-mono); font-weight: 700; border-radius: 6px; text-decoration: none;">
