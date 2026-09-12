@@ -52,3 +52,7 @@ export const hiddenRepos = [
   'Practice',
   'HTML-Web-Designs',
 ]
+
+export const verifiedLiveProjects: Record<string, string> = {
+  CodexEngine: 'https://codex-engine.vercel.app',
+}

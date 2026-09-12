@@ -68,7 +68,7 @@ Agentic AI & Systems Engineer with 3+ years of professional experience architect
 
 ### **Bachelor of Computer Applications (BCA)**
 **Institution:** Jaipur National University  
-**Tenure:** 06/2019 – 05/2022 &nbsp;|&nbsp; **Grade:** 77.4% — First Division  
+**Tenure:** 06/2019 – 05/2022 &nbsp;|&nbsp; **Grade:** 77.4% (First Division)  
 
 ---
 

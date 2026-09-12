@@ -1,6 +1,6 @@
 ---
 import Layout from '~/layouts/Layout.astro'
-import { repoRegistry, hiddenRepos } from '~/data/projectRegistry'
+import { repoRegistry, hiddenRepos, verifiedLiveProjects } from '~/data/projectRegistry'
 
 interface GitHubRepo {
   id: number
@@ -14,6 +14,21 @@ interface GitHubRepo {
   topics: string[]
   updated_at: string
   fork: boolean
+}
+
+function getRegistryKey(name: string): string | undefined {
+  for (const key of Object.keys(repoRegistry)) {
+    if (name.toLowerCase().includes(key.toLowerCase())) return key
+  }
+  return undefined
+}
+
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  })
 }
 
 let repos: GitHubRepo[] = []
@@ -34,28 +49,15 @@ try {
         !hiddenRepos.some((h) => repo.name.toLowerCase().includes(h.toLowerCase())),
     )
     .sort((a, b) => {
-      const aHome = a.homepage && a.homepage.trim() !== '' ? 1 : 0
-      const bHome = b.homepage && b.homepage.trim() !== '' ? 1 : 0
-      if (aHome !== bHome) return bHome - aHome
+      const aKey = getRegistryKey(a.name)
+      const bKey = getRegistryKey(b.name)
+      const aLive = aKey && verifiedLiveProjects[aKey] ? 1 : 0
+      const bLive = bKey && verifiedLiveProjects[bKey] ? 1 : 0
+      if (aLive !== bLive) return bLive - aLive
       return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
     })
 } catch (e) {
   fetchError = e instanceof Error ? e.message : 'Failed to fetch repos'
-}
-
-function getRegistryKey(name: string): string | undefined {
-  for (const key of Object.keys(repoRegistry)) {
-    if (name.toLowerCase().includes(key.toLowerCase())) return key
-  }
-  return undefined
-}
-
-function formatDate(dateStr: string): string {
-  return new Date(dateStr).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  })
 }
 ---
 
@@ -84,13 +86,14 @@ function formatDate(dateStr: string): string {
               const registryEntry = registryKey ? repoRegistry[registryKey] : null
               const description = registryEntry?.desc ?? repo.description ?? 'System architecture available in repository.'
               const tags = registryEntry?.tags ?? (repo.language ? [repo.language] : [])
+              const liveUrl = (registryKey && verifiedLiveProjects[registryKey]) || null
 
               return (
                 <article class="project-card">
                   <div class="project-head">
                     <h2 class="project-name">{repo.name.replace(/-/g, ' ')}</h2>
-                    {repo.homepage && (
-                      <a href={repo.homepage} target="_blank" rel="noopener" class="live-link">
+                    {liveUrl && (
+                      <a href={liveUrl} target="_blank" rel="noopener noreferrer" class="live-link">
                         Live ↗
                       </a>
                     )}
