@@ -7,26 +7,34 @@ title: About Me
 ### **Agentic AI & Systems Engineer**
 *Building Low-Latency AI Infra & Stateful Multi-Agent Backends*
 
-<div class="contact-bar">
-  <span class="contact-item">📍 Jaipur, India</span>
-  <span class="sep">•</span>
-  <span class="contact-item">✉️ <a href="mailto:anmolsharma152.dev@gmail.com">anmolsharma152.dev@gmail.com</a></span>
-  <span class="sep">•</span>
-  <span class="contact-item">📞 <a href="tel:+918412880194">+91&#8209;84128&#8209;80194</a></span>
-  <span class="sep">•</span>
-  <span class="contact-item">🔗 <a href="https://github.com/anmolsharma152" target="_blank" rel="noopener noreferrer">GitHub</a></span>
-  <span class="sep">•</span>
-  <span class="contact-item">🔗 <a href="https://linkedin.com/in/anmolsharma152" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+<div class="contact-block">
+  <div class="contact-row">
+    <span class="contact-item">📍 Jaipur, India</span>
+    <span class="sep">•</span>
+    <span class="contact-item">✉️ <a href="mailto:anmolsharma152.dev@gmail.com">anmolsharma152.dev@gmail.com</a></span>
+    <span class="sep">•</span>
+    <span class="contact-item">📞 <a href="tel:+918412880194">+91&#8209;84128&#8209;80194</a></span>
+  </div>
+  <div class="contact-row">
+    <span class="contact-item">🔗 <a href="https://github.com/anmolsharma152" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+    <span class="sep">•</span>
+    <span class="contact-item">🔗 <a href="https://linkedin.com/in/anmolsharma152" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+  </div>
 </div>
 
 <style>
-  .contact-bar {
+  .contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    margin: 1rem 0 1.5rem 0;
+  }
+  .contact-row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 0.4rem 0.75rem;
-    font-size: 0.85rem;
-    margin: 1rem 0 1.5rem 0;
   }
   .contact-item {
     white-space: nowrap;
@@ -36,11 +44,6 @@ title: About Me
   }
   .sep {
     opacity: 0.4;
-  }
-  @media (max-width: 640px) {
-    .sep {
-      display: none;
-    }
   }
 </style>
 
