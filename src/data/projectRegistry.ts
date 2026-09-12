@@ -1,15 +1,19 @@
 export const repoRegistry: Record<string, { desc: string; tags: string[] }> = {
-  'RecSys_RL': {
-    desc: 'Reinforcement Learning algorithms and environments designed for dynamic recommendation and personalization.',
-    tags: ['Reinforcement Learning', 'Recommendation Systems', 'Python'],
+  'CodexEngine': {
+    desc: 'Deployed a production document intelligence platform (codex-engine.vercel.app) on LangGraph state machines featuring multi-tenant pgvector search, streaming SSE responses, and automated golden dataset faithfulness regression testing.',
+    tags: ['Python', 'LangGraph', 'FastAPI', 'Next.js', 'pgvector', 'LangSmith', 'RAGAS'],
   },
-  'Fine-tuning-on-Job-Description-Corpus': {
-    desc: 'Fine-tuning transformer models on specialized job description corpora for automated skill mapping.',
-    tags: ['Fine-tuning', 'NLP', 'Transformers'],
+  'commerce_cortex': {
+    desc: 'Engineered a containerized multi-agent commerce backend featuring LangGraph state routing, PostgreSQL transactional checkpoints, Human-in-the-Loop approval gates, and 3-tier observability with OpenTelemetry and Langfuse distributed tracing.',
+    tags: ['Python', 'FastAPI', 'LangGraph', 'PostgreSQL', 'Docker Compose', 'Langfuse', 'OpenTelemetry'],
   },
-  'ML-Foundations': {
-    desc: 'Implementations of foundational machine learning algorithms (regression, clustering, trees) from scratch.',
-    tags: ['Machine Learning', 'Algorithms', 'Python'],
+  'Nimbus': {
+    desc: 'Engineered a multi-tenant autonomous coding agent platform featuring a trusted control plane, disposable Docker/MicroVM sandbox workspaces, real-time WebSocket event streams, and short-lived GitHub App credential brokering.',
+    tags: ['Python', 'FastAPI', 'LangGraph', 'Docker', 'WebSockets', 'GitHub API'],
+  },
+  'AlgoDeck': {
+    desc: 'Built a full-stack developer learning workstation featuring a dual-pane VS Code Monaco IDE, isolated subprocess execution sandbox (5s kill timeout, 512KB buffer limit), PostgreSQL 16 connection pooling, and automated test harness.',
+    tags: ['Node.js', 'Express', 'PostgreSQL 16', 'Docker Compose', 'Monaco IDE'],
   },
   'Disha': {
     desc: 'A production-grade, agentic Personal Intelligence platform powered by LangGraph, pgvector, and async PostgreSQL.',
@@ -18,10 +22,6 @@ export const repoRegistry: Record<string, { desc: string; tags: string[] }> = {
   'Aura': {
     desc: 'A privacy-focused, edge-optimized Arch Linux biometric auth daemon decoupled via Unix domain sockets and PAM.',
     tags: ['Rust', 'PAM', 'Edge AI'],
-  },
-  'CodexEngine': {
-    desc: 'A production-ready Agentic RAG engine with hybrid search, pgvector, LangGraph, and async FastAPI.',
-    tags: ['RAG', 'LangGraph', 'FastAPI'],
   },
   'WellnessMate': {
     desc: 'Multi-agent health companion built with CrewAI and MediaPipe real-time posture tracking in a Tauri desktop shell.',
@@ -34,6 +34,10 @@ export const repoRegistry: Record<string, { desc: string; tags: string[] }> = {
   'wikirag': {
     desc: 'A lightweight, fully offline RAG engine for Wikipedia querying using FAISS, RoBERTa, and Python.',
     tags: ['RAG', 'FAISS', 'Offline'],
+  },
+  'RecSys_RL': {
+    desc: 'Reinforcement Learning algorithms and environments designed for dynamic recommendation and personalization.',
+    tags: ['Reinforcement Learning', 'Recommendation Systems', 'Python'],
   },
 }
 

@@ -4,9 +4,9 @@ const config: SiteConfig = {
   site: 'https://anmolsharma152.github.io',
   title: 'Anmol Sharma',
   description:
-    'AI Systems Engineer. Agentic workflows, real-time voice pipelines, neuro-symbolic RAG. IIT Mandi DSAI.',
+    'Agentic AI & Systems Engineer. Building Low-Latency AI Infra & Stateful Multi-Agent Backends.',
   author: 'Anmol Sharma',
-  tags: ['AI', 'Machine Learning', 'Systems Engineering', 'Portfolio', 'Anmol Sharma', 'IIT Mandi'],
+  tags: ['Agentic AI', 'Systems Engineering', 'LLMOps', 'Multi-Agent Systems', 'Python', 'FastAPI', 'IIT Mandi'],
   socialCardAvatarImage: './public/profile.jpg',
   font: 'JetBrains Mono Variable',
   pageSize: 6,
@@ -16,6 +16,7 @@ const config: SiteConfig = {
     { name: 'About', url: '/about' },
     { name: 'Projects', url: '/projects' },
     { name: 'Archive', url: '/posts' },
+    { name: 'Resume', url: '/resume.pdf', external: true },
     {
       name: 'GitHub',
       url: 'https://github.com/anmolsharma152',
@@ -91,7 +92,7 @@ const config: SiteConfig = {
   },
   socialLinks: {
     github: 'https://github.com/anmolsharma152',
-    email: 'mailto:ozymandias.work@gmail.com',
+    email: 'mailto:anmolsharma152.dev@gmail.com',
     linkedin: 'https://linkedin.com/in/anmolsharma152',
     rss: true,
   },

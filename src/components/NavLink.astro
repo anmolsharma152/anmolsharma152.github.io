@@ -6,12 +6,14 @@ interface Props {
 }
 
 const { link } = Astro.props
+const isPdf = link.url.endsWith('.pdf')
 ---
 
 <a
   class="underline"
   rel={link.external ? 'noopener noreferrer' : undefined}
   target={link.external ? '_blank' : undefined}
+  download={isPdf ? 'Anmol_Sharma_Resume.pdf' : undefined}
   href={link.url}
 >
   {link.name}
